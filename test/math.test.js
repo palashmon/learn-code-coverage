@@ -1,4 +1,4 @@
-import { add, multiply } from '../src/math';
+import { add, multiply, subtract } from '../src/math';
 import { assert } from 'chai';
 
 describe('Test Math JS file', function() {
