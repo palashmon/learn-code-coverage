@@ -1,0 +1,30 @@
+{
+  "name": "learn-codecov",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Example repo for learning about Code Coverage",
+  "main": "src/math.js",
+  "scripts": {
+    "start": "npm run test",
+    "check-coverage": "nyc check-coverage --statements 40 --branches 40 --functions 40 --lines 40",
+    "test": "mocha test/*.js --require babel-core/register",
+    "cover": "nyc --reporter=lcov npm t",
+    "validate": "npm run cover && npm run check-coverage",
+    "precommit": "npm run validate"
+  },
+  "author": "Palash Mondal",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "6.26.3",
+    "babel-preset-env": "1.7.0",
+    "chai": "4.1.2",
+    "husky": "0.14.3",
+    "mocha": "5.2.0",
+    "nyc": "12.0.2"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  }
+}
