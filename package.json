@@ -9,6 +9,7 @@
     "check-coverage": "nyc check-coverage --statements 40 --branches 40 --functions 40 --lines 40",
     "test": "mocha test/*.js --require babel-core/register",
     "cover": "nyc --reporter=lcov npm t",
+    "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "validate": "npm run cover && npm run check-coverage",
     "precommit": "npm run validate"
   },
