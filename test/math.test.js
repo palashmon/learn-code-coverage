@@ -9,4 +9,8 @@ describe('Test Math JS file', function() {
   it('Test Multiply feature', () => {
     assert.equal(multiply(3, 5), 15);
   });
+
+  it('Test Subtract feature', () => {
+    assert.equal(subtract(5, 3), 2);
+  });
 });
